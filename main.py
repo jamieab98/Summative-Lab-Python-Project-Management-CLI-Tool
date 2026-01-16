@@ -16,6 +16,10 @@ assign_project.add_argument("project", type=str)
 add_task = subparsers.add_parser("add_task", help="Add a task to the database")
 add_task.add_argument("task", type=str)
 
+assign_task = subparsers.add_parser("assign_task", help="Take a project and assign a task to it")
+assign_task.add_argument("project", type=str)
+assign_task.add_argument("task", type=str)
+
 args = parser.parse_args()
 
 if args.command == "add_user":
@@ -26,3 +30,5 @@ if args.command == "add_task":
     print(args.task)
 if args.command == "assign_project":
     print(f"Assign {args.project} to {args.user}")
+if args.command == "assign_task":
+    print(f"Assigning {args.task} to {args.project}")
