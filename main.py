@@ -9,9 +9,14 @@ add_user.add_argument("user", type=str)
 add_project = subparsers.add_parser("add_project")
 add_project.add_argument("project", type=str)
 
+add_task = subparsers.add_parser("add_task")
+add_task.add_argument("task", type=str)
+
 args = parser.parse_args()
 
 if args.command == "add_user":
     print(args.user)
 if args.command == "add_project":
     print(args.project)
+if args.command == "add_task":
+    print(args.task)
