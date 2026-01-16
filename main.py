@@ -34,8 +34,8 @@ if args.command == "add_project":
     Project(args.project, args.description, args.due_date)
 if args.command == "add_task":
     Task(args.task)
-    print(Task.tasks)
 if args.command == "assign_project":
-    print(f"Assign {args.project} to {args.user}")
+    u = [user for user in User.users if user.name == args.user][0]
+    u.assign_project(args.project)
 if args.command == "assign_task":
     print(f"Assigning {args.task} to {args.project}")
