@@ -1,5 +1,6 @@
 import argparse
 from models.usermodel import User
+from models.projectmodel import Project
 
 parser = argparse.ArgumentParser(description = "Program for managers to manage their users, projects, and tasks")
 subparsers = parser.add_subparsers(dest = "command", required=True)
@@ -10,6 +11,8 @@ add_user.add_argument("email", type=str)
 
 add_project = subparsers.add_parser("add_project", help="Add a project to the database")
 add_project.add_argument("project", type=str)
+add_project.add_argument("description", type=str)
+add_project.add_argument("due_date", type=str)
 
 assign_project = subparsers.add_parser("assign_project", help="Take a user and assign them a project")
 assign_project.add_argument("user", type=str)
@@ -27,7 +30,7 @@ args = parser.parse_args()
 if args.command == "add_user":
     User(args.user, args.email)
 if args.command == "add_project":
-    print(args.project)
+    Project(args.project, args.description, args.due_date)
 if args.command == "add_task":
     print(args.task)
 if args.command == "assign_project":
