@@ -1,4 +1,4 @@
-import json
+from utils.adduser import add_user
 class User:
     users = []
 
@@ -12,11 +12,7 @@ class User:
             "email": self.email,
             "projects": self.projects
         }
-        with open("data/userdata.json", "r") as f:
-            data = json.load(f)
-        with open("data/userdata.json", "w") as f:
-            data.append(userdata)
-            json.dump(data, f, indent=2) 
+        add_user(userdata)
 
     def assign_project(self, project):
         self.projects.append(project)
