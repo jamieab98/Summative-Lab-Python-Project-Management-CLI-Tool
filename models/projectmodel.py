@@ -14,4 +14,4 @@ class Project:
     '''def __repr__(self):
         return self.title'''
 
-project1 = Project("project1", "Complete the Flatiron Course so you can working with software development", "1/1/2027")
+project1 = Project("project1", "Become a software engineer", "1/1/2027")
