@@ -1,3 +1,4 @@
+import json
 class User:
     users = []
 
@@ -6,7 +7,17 @@ class User:
         self.email = email
         self.projects = []
         User.users.append(self)
-    
+        userdata = {
+            "name": self.name,
+            "email": self.email,
+            "projects": self.projects
+        }
+        with open("data/userdata.json", "r") as f:
+            data = json.load(f)
+        with open("data/userdata.json", "w") as f:
+            data.append(userdata)
+            json.dump(data, f, indent=2) 
+
     def assign_project(self, project):
         self.projects.append(project)
 
