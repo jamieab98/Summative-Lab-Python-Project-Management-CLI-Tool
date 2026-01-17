@@ -8,5 +8,10 @@ class Project:
         self.tasks = []
         Project.projects.append(self)
     
-    def __repr__(self):
-        return self.title
+    def assign_task(self, task):
+        self.tasks.append(task)
+    
+    '''def __repr__(self):
+        return self.title'''
+
+project1 = Project("project1", "Complete the Flatiron Course so you can working with software development", "1/1/2027")

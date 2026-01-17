@@ -9,3 +9,5 @@ class Task:
     
     def __repr__(self):
         return self.title
+
+task1 = Task("Complete the Summative Lab Assignment for Module 7")

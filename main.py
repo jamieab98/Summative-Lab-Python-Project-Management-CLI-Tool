@@ -38,4 +38,5 @@ if args.command == "assign_project":
     u = [user for user in User.users if user.name == args.user][0]
     u.assign_project(args.project)
 if args.command == "assign_task":
-    print(f"Assigning {args.task} to {args.project}")
+    p = [project for project in Project.projects if project.title == args.project][0]
+    p.assign_task(args.task)
