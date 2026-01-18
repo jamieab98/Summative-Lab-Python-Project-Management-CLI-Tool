@@ -1,8 +1,8 @@
 import json
 
 def addtask(taskdata):
-    with open("data/taskdata.json", "r") as f:
+    with open("data/data.json", "r") as f:
         content = json.load(f)
-    content.append(taskdata)
-    with open("data/taskdata.json", "w") as f:
-        json.dump(content, f, indent = 2)
+    content["tasks"].append(taskdata)
+    with open("data/data.json", "w") as f:
+        json.dump(content, f, indent=2)
