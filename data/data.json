@@ -3,12 +3,10 @@
     {
       "name": "Jamie",
       "email": "jamieab98@gmail.com",
-      "projects": []
-    },
-    {
-      "name": "Michael",
-      "email": "mikeb@yahoo.com",
-      "projects": []
+      "projects": [
+        "project1",
+        "project2"
+      ]
     }
   ],
   "projects": [

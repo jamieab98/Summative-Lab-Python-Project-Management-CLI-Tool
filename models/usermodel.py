@@ -1,4 +1,5 @@
 from utils.adduser import add_user
+from utils.assign_project import assignproject
 class User:
     users = []
 
@@ -16,6 +17,7 @@ class User:
 
     def assign_project(self, project):
         self.projects.append(project)
+        assignproject(self.name, project)
 
     '''def __repr__(self):
         return(self.name)'''
