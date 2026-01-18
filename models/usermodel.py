@@ -19,5 +19,3 @@ class User:
 
     '''def __repr__(self):
         return(self.name)'''
-
-user1 = User("jamie", "jamieab98@gmail.com")
