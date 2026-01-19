@@ -4,6 +4,7 @@ from models.projectmodel import Project
 from models.taskmodel import Task
 from utils.assign_project import assignproject
 from utils.assign_task import assigntask
+from utils.completetask import completetask
 
 
 parser = argparse.ArgumentParser(description = "Program for managers to manage their users, projects, and tasks")
@@ -26,6 +27,9 @@ add_task = subparsers.add_parser("add_task", help="Add a task to the database an
 add_task.add_argument("task", type=str)
 add_task.add_argument("project", type=str)
 
+complete_task = subparsers.add_parser("complete_task", help="Mark a task as complete")
+complete_task.add_argument("task", type=str)
+
 args = parser.parse_args()
 
 if args.command == "add_user":
@@ -40,3 +44,5 @@ if args.command == "assign_project":
     '''u = [user for user in User.users if user.name == args.user][0]'''
     '''u.assign_project(args.project)'''
     assignproject(args.user, args.project)
+if args.command == "complete_task":
+    completetask(args.task)

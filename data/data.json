@@ -14,26 +14,25 @@
       "title": "project1",
       "description": "Become a sofware developer",
       "due_data": "01/01/2027",
-      "tasks": [
-        "Finish the Flatiron course"
-      ]
+      "tasks": []
     },
     {
       "title": "project2",
       "description": "Go to club nationals",
       "due_data": "10/1/2026",
       "tasks": [
-        "Create consistent gym schedule"
+        "Create consistent gym schedule",
+        "Play well at the Toro tryouts"
       ]
     }
   ],
   "tasks": [
     {
-      "title": "Finish the Flatiron course",
-      "status": "incomplete"
+      "title": "Create consistent gym schedule",
+      "status": "complete"
     },
     {
-      "title": "Create consistent gym schedule",
+      "title": "Play well at the Toro tryouts",
       "status": "incomplete"
     }
   ]
