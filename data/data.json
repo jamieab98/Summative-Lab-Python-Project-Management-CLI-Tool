@@ -15,26 +15,26 @@
       "description": "Become a sofware developer",
       "due_data": "01/01/2027",
       "tasks": [
-        "task1"
+        "Finish the Flatiron course"
       ]
     },
     {
       "title": "project2",
       "description": "Go to club nationals",
       "due_data": "10/1/2026",
-      "tasks": []
+      "tasks": [
+        "Create consistent gym schedule"
+      ]
     }
   ],
   "tasks": [
     {
-      "title": "Complete the summative lab assignment for module 7",
-      "status": "incomplete",
-      "assigned_to": []
+      "title": "Finish the Flatiron course",
+      "status": "incomplete"
     },
     {
-      "title": "Create a consistent gym schedule",
-      "status": "incomplete",
-      "assigned_to": []
+      "title": "Create consistent gym schedule",
+      "status": "incomplete"
     }
   ]
 }

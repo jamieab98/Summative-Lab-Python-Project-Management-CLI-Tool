@@ -5,12 +5,10 @@ class Task:
     def __init__(self, title):
         self.title = title
         self.status = "incomplete"
-        self.assigned_to = []
         Task.tasks.append(self)
         taskdata = {
             "title": self.title,
             "status": self.status,
-            "assigned_to": self.assigned_to
         }
         addtask(taskdata)
     

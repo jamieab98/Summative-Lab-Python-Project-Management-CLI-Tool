@@ -1,6 +1,6 @@
 import json
 
-def assigntask(project, task):
+def assigntask(task, project):
     with open("data/data.json", "r") as f:
         content = json.load(f)
     projectcontent = [content for content in content['projects'] if content['title'] == project][0]

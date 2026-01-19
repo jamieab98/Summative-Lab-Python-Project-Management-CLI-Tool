@@ -22,12 +22,9 @@ assign_project = subparsers.add_parser("assign_project", help="Take a user and a
 assign_project.add_argument("user", type=str)
 assign_project.add_argument("project", type=str)
 
-add_task = subparsers.add_parser("add_task", help="Add a task to the database")
+add_task = subparsers.add_parser("add_task", help="Add a task to the database and assign it to a project")
 add_task.add_argument("task", type=str)
-
-assign_task = subparsers.add_parser("assign_task", help="Take a project and assign a task to it")
-assign_task.add_argument("project", type=str)
-assign_task.add_argument("task", type=str)
+add_task.add_argument("project", type=str)
 
 args = parser.parse_args()
 
@@ -37,12 +34,9 @@ if args.command == "add_project":
     Project(args.project, args.description, args.due_date)
 if args.command == "add_task":
     Task(args.task)
+    assigntask(args.task, args.project)
 if args.command == "assign_project":
     '''Add these lines back in once we have the script running constantly'''
     '''u = [user for user in User.users if user.name == args.user][0]'''
     '''u.assign_project(args.project)'''
     assignproject(args.user, args.project)
-if args.command == "assign_task":
-    '''p = [project for project in Project.projects if project.title == args.project][0]'''
-    '''p.assign_task(args.task)'''
-    assigntask(args.project, args.task)
