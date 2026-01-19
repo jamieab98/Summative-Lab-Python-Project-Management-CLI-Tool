@@ -14,7 +14,9 @@
       "title": "project1",
       "description": "Become a sofware developer",
       "due_data": "01/01/2027",
-      "tasks": []
+      "tasks": [
+        "Complete the summative lab for module 7"
+      ]
     },
     {
       "title": "project2",
@@ -33,6 +35,10 @@
     },
     {
       "title": "Play well at the Toro tryouts",
+      "status": "incomplete"
+    },
+    {
+      "title": "Complete the summative lab for module 7",
       "status": "incomplete"
     }
   ]
