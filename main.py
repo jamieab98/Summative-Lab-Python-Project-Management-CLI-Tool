@@ -8,6 +8,7 @@ from utils.completetask import completetask
 from utils.adduser import adduser
 from utils.addproject import addproject
 from utils.addtask import addtask
+from utils.loaddata import loaddata
 
 def main():
     parser = argparse.ArgumentParser(description = "Program for managers to manage their users, projects, and tasks")
@@ -53,5 +54,5 @@ def main():
     if args.command == "complete_task":
         completetask(args.task)
 
-if __name__ == "__main__":
-    main()
+'''if __name__ == "__main__":
+    main()'''

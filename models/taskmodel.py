@@ -6,5 +6,5 @@ class Task:
         self.status = "incomplete"
         Task.tasks.append(self)
     
-    def __repr__(self):
-        return self.title
+    '''def __repr__(self):
+        return self.title'''
