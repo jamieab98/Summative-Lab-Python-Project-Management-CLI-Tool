@@ -6,15 +6,17 @@ from models.taskmodel import Task
 def loaddata():
     with open("data/data.json", "r") as f:
         content = json.load(f)
-    usercontent = content['users']
-    for user in usercontent:
-        User(user['name'], user['email'])
-    projectcontent = content['projects']
-    for project in projectcontent:
-        Project(project['title'], project['description'], project['due_date'])
+
     taskcontent = content['tasks']
     for task in taskcontent:
-        Task(task['title'])
+        Task(task['title'], task['status'])
+
+    projectcontent = content['projects']
+    for project in projectcontent:
+        Project(project['title'], project['description'], project['due_date'], project['tasks'])
+
+    usercontent = content['users']
+    for user in usercontent:
+        User(user['name'], user['email'], user['projects'])
 
 loaddata()
-print(Task.tasks)
