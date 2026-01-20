@@ -1,6 +1,11 @@
 import json
 
-def add_user(userdata):
+def adduser(name, email):
+    userdata = {
+        'name': name,
+        'email': email,
+        'projects': []
+    }
     with open("data/data.json", "r") as f:
         content = json.load(f)
     content["users"].append(userdata)
