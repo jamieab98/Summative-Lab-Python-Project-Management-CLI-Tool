@@ -31,6 +31,12 @@
         "Create consistent gym schedule",
         "Play well at the Toro tryouts"
       ]
+    },
+    {
+      "title": "project3",
+      "description": "Go to nationals with Jamie",
+      "due_date": "10/1/2026",
+      "tasks": []
     }
   ],
   "tasks": [

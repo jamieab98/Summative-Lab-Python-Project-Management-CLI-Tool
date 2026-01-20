@@ -6,6 +6,7 @@ from utils.assign_project import assignproject
 from utils.assign_task import assigntask
 from utils.completetask import completetask
 from utils.adduser import adduser
+from utils.addproject import addproject
 
 def main():
     parser = argparse.ArgumentParser(description = "Program for managers to manage their users, projects, and tasks")
@@ -38,6 +39,7 @@ def main():
         adduser(args.user, args.email)
     if args.command == "add_project":
         Project(args.project, args.description, args.due_date)
+        addproject(args.project, args.description, args.due_date)
     if args.command == "add_task":
         Task(args.task)
         assigntask(args.task, args.project)
