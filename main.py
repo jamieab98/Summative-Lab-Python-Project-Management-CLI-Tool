@@ -40,6 +40,9 @@ def main():
     users_projects = subparsers.add_parser("users_projects", help="Get a list of projects assigned to a specific user")
     users_projects.add_argument("user", type=str)
 
+    incomplete_tasks = subparsers.add_parser("incomplete_tasks", help="Get a list of incomplete tasks from a specific project")
+    incomplete_tasks.add_argument("project", type=str)
+
     args = parser.parse_args()
 
     loaddata()
@@ -55,9 +58,6 @@ def main():
         addtask(args.task)
         assigntask(args.task, args.project)
     if args.command == "assign_project":
-        '''Add these lines back in once we have the script running constantly'''
-        '''u = [user for user in User.users if user.name == args.user][0]'''
-        '''u.assign_project(args.project)'''
         assignproject(args.user, args.project)
     if args.command == "complete_task":
         completetask(args.task)
@@ -66,7 +66,14 @@ def main():
     if args.command == "users_projects":
         userprojects = [user.projects for user in User.users if user.name == args.user][0]
         print(userprojects)
-    
-
+    if args.command == "incomplete_tasks":
+        incompletetasks = []
+        tasks = [project.tasks for project in Project.projects if args.project == project.title][0]
+        allincompletetasks = [task.title for task in Task.tasks if task.status == 'incomplete']
+        for task in tasks:
+            if task in allincompletetasks:
+                incompletetasks.append(task)
+        print(incompletetasks)
+        
 if __name__ == "__main__":
     main()

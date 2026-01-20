@@ -6,5 +6,5 @@ class Task:
         self.status = status
         Task.tasks.append(self)
     
-    def __repr__(self):
-        return self.status
+    '''def __repr__(self):
+        return self.status'''
