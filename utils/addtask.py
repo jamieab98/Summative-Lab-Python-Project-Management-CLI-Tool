@@ -1,6 +1,10 @@
 import json
 
-def addtask(taskdata):
+def addtask(title):
+    taskdata = {
+        'title': title,
+        'status': 'incomplete'
+    }
     with open("data/data.json", "r") as f:
         content = json.load(f)
     content["tasks"].append(taskdata)

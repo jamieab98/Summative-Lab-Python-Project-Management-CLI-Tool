@@ -36,7 +36,9 @@
       "title": "project3",
       "description": "Go to nationals with Jamie",
       "due_date": "10/1/2026",
-      "tasks": []
+      "tasks": [
+        "Tryout for Toro"
+      ]
     }
   ],
   "tasks": [
@@ -50,6 +52,10 @@
     },
     {
       "title": "Complete the summative lab for module 7",
+      "status": "incomplete"
+    },
+    {
+      "title": "Tryout for Toro",
       "status": "incomplete"
     }
   ]
