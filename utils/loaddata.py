@@ -18,5 +18,3 @@ def loaddata():
     usercontent = content['users']
     for user in usercontent:
         User(user['name'], user['email'], user['projects'])
-    
-    print('Data loaded')

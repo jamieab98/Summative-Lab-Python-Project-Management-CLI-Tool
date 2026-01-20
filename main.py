@@ -10,8 +10,6 @@ from utils.addproject import addproject
 from utils.addtask import addtask
 from utils.loaddata import loaddata
 
-loaddata()
-
 def main():
 
     parser = argparse.ArgumentParser(description = "Program for managers to manage their users, projects, and tasks")
@@ -37,7 +35,14 @@ def main():
     complete_task = subparsers.add_parser("complete_task", help="Mark a task as complete")
     complete_task.add_argument("task", type=str)
 
+    list_users = subparsers.add_parser("list_users", help="Get a list of users")
+
+    users_projects = subparsers.add_parser("users_projects", help="Get a list of projects assigned to a specific user")
+    users_projects.add_argument("user", type=str)
+
     args = parser.parse_args()
+
+    loaddata()
 
     if args.command == "add_user":
         User(args.user, args.email)
@@ -56,6 +61,12 @@ def main():
         assignproject(args.user, args.project)
     if args.command == "complete_task":
         completetask(args.task)
+    if args.command == "list_users":
+        print(User.users)
+    if args.command == "users_projects":
+        userprojects = [user.projects for user in User.users if user.name == args.user][0]
+        print(userprojects)
+    
 
-'''if __name__ == "__main__":
-    main()'''
+if __name__ == "__main__":
+    main()

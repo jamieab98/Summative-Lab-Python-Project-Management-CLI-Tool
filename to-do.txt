@@ -1,7 +1,7 @@
 Subcommands to add:
-Subcommand to get a list of users
-Subcommand to get a list of projects a user has
+XSubcommand to get a list of usersX
+XSubcommand to get a list of projects a user hasX
 Subcommand to get a list of incomplete tasks projects has
 
 Features to add:
-On script start, take the json data and put it in the temp storage
+XOn script start, take the json data and put it in the temp storageX
