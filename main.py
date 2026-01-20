@@ -10,7 +10,10 @@ from utils.addproject import addproject
 from utils.addtask import addtask
 from utils.loaddata import loaddata
 
+loaddata()
+
 def main():
+
     parser = argparse.ArgumentParser(description = "Program for managers to manage their users, projects, and tasks")
     subparsers = parser.add_subparsers(dest = "command", required=True)
 
