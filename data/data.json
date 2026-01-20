@@ -11,7 +11,9 @@
     {
       "name": "Bobby",
       "email": "MrG@gmail.com",
-      "projects": []
+      "projects": [
+        "project3"
+      ]
     }
   ],
   "projects": [
