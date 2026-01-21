@@ -60,6 +60,8 @@ def main():
     if args.command == "assign_project":
         assignproject(args.user, args.project)
     if args.command == "complete_task":
+        task = [task for task in Task.tasks if task.id == args.taskid][0]
+        task.status = 'complete'
         completetask(args.taskid)
     if args.command == "list_users":
         print(User.users)

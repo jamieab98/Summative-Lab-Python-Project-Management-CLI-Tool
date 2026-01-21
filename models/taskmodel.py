@@ -3,7 +3,7 @@ class Task:
 
     def __init__(self, title, status="incomplete"):
         self._title = title
-        self.status = status
+        self._status = status
         self._id = len(Task.tasks)+1
         Task.tasks.append(self)
     
@@ -14,6 +14,17 @@ class Task:
     @property
     def title(self):
         return self._title
+    
+    @property
+    def status(self):
+        return self._status
+    
+    @status.setter
+    def status(self, value):
+        if self._status == 'complete':
+            raise ValueError("The task has already been completed")
+        else:
+            self._status = 'complete'
     
     '''def __repr__(self):
         return self.status'''
