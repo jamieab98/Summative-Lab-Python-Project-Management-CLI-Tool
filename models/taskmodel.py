@@ -22,7 +22,7 @@ class Task:
     @status.setter
     def status(self, value):
         if self._status == 'complete':
-            raise ValueError("The task has already been completed")
+            raise ValueError("[bold red]The task has already been completed[/bold red]")
         else:
             self._status = 'complete'
     

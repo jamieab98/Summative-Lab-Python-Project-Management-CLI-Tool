@@ -1,3 +1,0 @@
-Make it so each task has its own ID and can get marked as completed based off of the ID
-
-Use @property and setter methods to control inputs

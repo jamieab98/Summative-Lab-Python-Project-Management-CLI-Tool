@@ -1,4 +1,6 @@
 import argparse
+from rich.console import Console
+console = Console()
 from models.usermodel import User
 from models.projectmodel import Project
 from models.taskmodel import Task
@@ -54,7 +56,7 @@ def main():
         try:
             Project(args.project, args.description, args.due_date)
         except ValueError as e:
-            print(e)
+            console.print(f"[bold red]{e}[/bold red]")
             return
         addproject(args.project, args.description, args.due_date)
     if args.command == "add_task":
@@ -65,7 +67,11 @@ def main():
         assignproject(args.user, args.project)
     if args.command == "complete_task":
         task = [task for task in Task.tasks if task.id == args.taskid][0]
-        task.status = 'complete'
+        try:
+            task.status = 'complete'
+        except ValueError as e:
+            console.print(f"[bold red]{e}[/bold red]")
+            return
         completetask(args.taskid)
     if args.command == "list_users":
         print(User.users)
