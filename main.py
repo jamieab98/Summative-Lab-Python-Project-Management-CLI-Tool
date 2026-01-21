@@ -33,7 +33,7 @@ def main():
     add_task.add_argument("project", type=str)
 
     complete_task = subparsers.add_parser("complete_task", help="Mark a task as complete")
-    complete_task.add_argument("task", type=str)
+    complete_task.add_argument("taskid", type=int)
 
     list_users = subparsers.add_parser("list_users", help="Get a list of users")
 
@@ -60,7 +60,7 @@ def main():
     if args.command == "assign_project":
         assignproject(args.user, args.project)
     if args.command == "complete_task":
-        completetask(args.task)
+        completetask(args.taskid)
     if args.command == "list_users":
         print(User.users)
     if args.command == "users_projects":
@@ -68,12 +68,13 @@ def main():
         print(userprojects)
     if args.command == "incomplete_tasks":
         incompletetasks = []
-        tasks = [project.tasks for project in Project.projects if args.project == project.title][0]
-        allincompletetasks = [task.title for task in Task.tasks if task.status == 'incomplete']
-        for task in tasks:
-            if task in allincompletetasks:
+        all_incomplete_tasks = [task for task in Task.tasks if task.status == 'incomplete']
+        projecttasks = [project for project in Project.projects if project.title == args.project][0].tasks
+        for task in all_incomplete_tasks:
+            if task.title in projecttasks:
                 incompletetasks.append(task)
-        print(incompletetasks)
+        for task in incompletetasks:
+            print(f"ID: {task.id} | Task: {task.title}")
         
 if __name__ == "__main__":
     main()

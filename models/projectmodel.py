@@ -11,5 +11,5 @@ class Project:
     def assign_task(self, task):
         self.tasks.append(task)
     
-    def __repr__(self):
-        return self.title
+    '''def __repr__(self):
+        return self'''
