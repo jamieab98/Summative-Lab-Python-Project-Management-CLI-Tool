@@ -51,7 +51,11 @@ def main():
         User(args.user, args.email)
         adduser(args.user, args.email)
     if args.command == "add_project":
-        Project(args.project, args.description, args.due_date)
+        try:
+            Project(args.project, args.description, args.due_date)
+        except ValueError as e:
+            print(e)
+            return
         addproject(args.project, args.description, args.due_date)
     if args.command == "add_task":
         Task(args.task)

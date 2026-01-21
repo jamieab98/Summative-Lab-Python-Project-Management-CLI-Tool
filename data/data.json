@@ -28,7 +28,7 @@
     {
       "title": "project2",
       "description": "Go to club nationals",
-      "due_date": "10/1/2026",
+      "due_date": "10/01/2026",
       "tasks": [
         "Create consistent gym schedule",
         "Play well at the Toro tryouts",
@@ -38,7 +38,7 @@
     {
       "title": "project3",
       "description": "Go to nationals with Jamie",
-      "due_date": "10/1/2026",
+      "due_date": "10/01/2026",
       "tasks": [
         "Tryout for Toro"
       ]

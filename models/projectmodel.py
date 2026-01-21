@@ -1,3 +1,4 @@
+from datetime import datetime
 class Project:
     projects = []
 
@@ -8,8 +9,26 @@ class Project:
         self.tasks = tasks
         Project.projects.append(self)
     
+    @property
+    def due_date(self):
+        return(self._due_date)
+    
+    @due_date.setter
+    def due_date(self, value):
+        if check_date(value):
+            self._due_date = value
+        else:
+            raise ValueError("Date format must be 'mm/dd/yyyy")
+    
     def assign_task(self, task):
         self.tasks.append(task)
     
     '''def __repr__(self):
         return self'''
+    
+def check_date(date):
+    try:
+        datetime.strptime(date, "%m/%d/%Y")
+        return True
+    except ValueError:
+        return False
