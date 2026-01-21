@@ -1,7 +1,3 @@
-Subcommands to add:
-XSubcommand to get a list of usersX
-XSubcommand to get a list of projects a user hasX
-Subcommand to get a list of incomplete tasks projects has
+Make it so each task has its own ID and can get marked as completed based off of the ID
 
-Features to add:
-XOn script start, take the json data and put it in the temp storageX
+Use @property and setter methods to control inputs

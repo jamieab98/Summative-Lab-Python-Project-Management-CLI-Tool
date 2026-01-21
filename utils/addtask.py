@@ -1,9 +1,11 @@
 import json
+from models.taskmodel import Task
 
 def addtask(title):
     taskdata = {
         'title': title,
-        'status': 'incomplete'
+        'status': 'incomplete',
+        'id': len(Task.tasks)
     }
     with open("data/data.json", "r") as f:
         content = json.load(f)

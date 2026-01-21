@@ -31,7 +31,8 @@
       "due_date": "10/1/2026",
       "tasks": [
         "Create consistent gym schedule",
-        "Play well at the Toro tryouts"
+        "Play well at the Toro tryouts",
+        "Throw consistently until tryouts"
       ]
     },
     {
@@ -46,19 +47,28 @@
   "tasks": [
     {
       "title": "Create consistent gym schedule",
-      "status": "complete"
+      "status": "complete",
+      "id": 1
     },
     {
       "title": "Play well at the Toro tryouts",
-      "status": "incomplete"
+      "status": "incomplete",
+      "id": 2
     },
     {
       "title": "Complete the summative lab for module 7",
-      "status": "incomplete"
+      "status": "incomplete",
+      "id": 3
     },
     {
       "title": "Tryout for Toro",
-      "status": "incomplete"
+      "status": "incomplete",
+      "id": 4
+    },
+    {
+      "title": "Throw consistently until tryouts",
+      "status": "incomplete",
+      "id": 5
     }
   ]
 }
