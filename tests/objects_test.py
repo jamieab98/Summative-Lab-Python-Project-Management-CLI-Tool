@@ -1,11 +1,15 @@
+from rich.console import Console
+console = Console()
 from models.usermodel import User
 from models.projectmodel import Project
 from models.taskmodel import Task
+from utils.assign_project import assignproject
 
 u = User("Ashley", "ashleyjones@gmail.com")
 
 assert u.name == "Ashley", "User name was not set correctly"
 assert u.email == "ashleyjones@gmail.com", "Email was not set correctly"
+console.print("[green]All users were sucessfully created[/green]")
 
 p1 = Project("project49", "Run a marathon in less than 4 hours", "12/31/2027")
 p2 = Project("project67", "Save 1x yearly salary in saving account", "09/09/2028")
@@ -18,6 +22,7 @@ assert p2.title == "project67", "Project title was not set correctly"
 assert p2.description == "Save 1x yearly salary in saving account", "Project description was not correctly set"
 assert p2.due_date == "09/09/2028", "Project due date was not correctly set"
 assert p2.tasks == []
+console.print("[green]All projects were successfully created[/green]")
 
 t1 = Task("Sign up for a marathon")
 t2 = Task("Complete 4 half marathons")
@@ -30,3 +35,4 @@ assert t2.title == "Complete 4 half marathons", "Task title was not set correctl
 assert t3.title == "Complete a half marathon in less than 2 hours", "Task title was not set correctly"
 assert t4.title == "Create a budget", "Task title was not set correctly"
 assert t5.title == "Get rid of all credit card debt", "Task title was not set correctly"
+console.print("[green]All tasks were successfully created[/green]")
