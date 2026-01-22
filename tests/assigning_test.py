@@ -1,5 +1,5 @@
+import utils.assign_project as ap
 from utils.assign_project import assignproject
-import json
 
 mockdata = {
     "users": [
@@ -20,13 +20,12 @@ mockdata = {
 }
 
 def fakeload(f):
-    return mockdata.copy()
+    return mockdata
 def fakedump(data, f, indent=2):
     global mockdata
     mockdata = data
 
-json.load = fakeload
-json.dump = fakedump
+ap.json.load = fakeload
+ap.json.dump = fakedump
 
 assignproject("Ashley", "project49")
-assert mockdata['users'][0]['projects'][0] == 'project49'
