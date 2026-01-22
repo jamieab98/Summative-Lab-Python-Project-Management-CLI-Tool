@@ -3,7 +3,6 @@ console = Console()
 from models.usermodel import User
 from models.projectmodel import Project
 from models.taskmodel import Task
-from utils.assign_project import assignproject
 
 u = User("Ashley", "ashleyjones@gmail.com")
 
