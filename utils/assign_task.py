@@ -1,5 +1,6 @@
 import json
 
+#function to make a specific project object own a task object
 def assigntask(task, project):
     with open("data/data.json", "r") as f:
         content = json.load(f)

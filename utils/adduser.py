@@ -1,5 +1,6 @@
 import json
 
+#function to create a user object
 def adduser(name, email):
     userdata = {
         'name': name,

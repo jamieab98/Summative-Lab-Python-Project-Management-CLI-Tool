@@ -3,6 +3,7 @@ from models.usermodel import User
 from models.projectmodel import Project
 from models.taskmodel import Task
 
+#function to load the data from the .json file right before a command is ran
 def loaddata():
     with open("data/data.json", "r") as f:
         content = json.load(f)

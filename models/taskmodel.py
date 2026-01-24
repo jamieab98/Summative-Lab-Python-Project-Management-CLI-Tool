@@ -1,3 +1,4 @@
+#Task class for creating task objects
 class Task:
     tasks = []
 

@@ -1,5 +1,6 @@
 import json
 
+#function to make a user object own a specific project object
 def assignproject(user, project):
     with open("data/data.json", "r") as f:
         content = json.load(f)

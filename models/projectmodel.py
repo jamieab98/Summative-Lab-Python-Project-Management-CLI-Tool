@@ -1,5 +1,7 @@
 from datetime import datetime
+#Project class for creating projects objects
 class Project:
+    
     projects = []
 
     def __init__(self, title, description, due_date, tasks=[]):

@@ -1,5 +1,6 @@
 import json
 
+#Function to add create a project object
 def addproject(title, description, due_date):
     projectdate = {
         'title': title,

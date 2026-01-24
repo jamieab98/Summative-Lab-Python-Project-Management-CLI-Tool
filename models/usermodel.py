@@ -1,4 +1,5 @@
 from utils.assign_project import assignproject
+#User class for creating user objects
 class User:
     users = []
 

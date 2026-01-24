@@ -1,6 +1,7 @@
 import json
 from models.taskmodel import Task
 
+#function to create a task object
 def addtask(title):
     taskdata = {
         'title': title,
