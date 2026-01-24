@@ -1,74 +1,8 @@
 {
   "users": [
-    {
-      "name": "Jamie",
-      "email": "jamieab98@gmail.com",
-      "projects": [
-        "project1",
-        "project2"
-      ]
-    },
-    {
-      "name": "Bobby",
-      "email": "MrG@gmail.com",
-      "projects": [
-        "project3"
-      ]
-    }
   ],
   "projects": [
-    {
-      "title": "project1",
-      "description": "Become a sofware developer",
-      "due_date": "01/01/2027",
-      "tasks": [
-        "Complete the summative lab for module 7"
-      ]
-    },
-    {
-      "title": "project2",
-      "description": "Go to club nationals",
-      "due_date": "10/01/2026",
-      "tasks": [
-        "Create consistent gym schedule",
-        "Play well at the Toro tryouts",
-        "Throw consistently until tryouts"
-      ]
-    },
-    {
-      "title": "project3",
-      "description": "Go to nationals with Jamie",
-      "due_date": "10/01/2026",
-      "tasks": [
-        "Tryout for Toro"
-      ]
-    }
   ],
   "tasks": [
-    {
-      "title": "Create consistent gym schedule",
-      "status": "complete",
-      "id": 1
-    },
-    {
-      "title": "Play well at the Toro tryouts",
-      "status": "complete",
-      "id": 2
-    },
-    {
-      "title": "Complete the summative lab for module 7",
-      "status": "incomplete",
-      "id": 3
-    },
-    {
-      "title": "Tryout for Toro",
-      "status": "incomplete",
-      "id": 4
-    },
-    {
-      "title": "Throw consistently until tryouts",
-      "status": "incomplete",
-      "id": 5
-    }
   ]
 }
